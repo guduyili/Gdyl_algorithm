@@ -2,6 +2,8 @@ n = int(input())
 
 L = len(str(n))
 
+
+# 1+2+...+(L-2) = (L-1)*(L-2)/2
 # 所有位数 < L 的答案
 ans = 9 * (L - 1) * (L - 2) // 2
 
@@ -12,7 +14,7 @@ for d in range(1, 10):
         s[zero_pos] = '0'
 
         x = int(''.join(s))
-
+        # print(x)
         if x <= n:
             ans += 1
 
